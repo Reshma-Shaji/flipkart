@@ -2,8 +2,13 @@ import React from 'react';
 
 const Baner2 = () => {
   return (
-    <div className="py-3 ml-7 w-[98%]">
-      <img src="baner11.png" alt="" />
+    <div className="py-3 w-[98%] mx-auto">
+      <img
+        src="baner11.png"
+        alt="Banner"
+        className="w-full h-auto rounded-lg shadow-md"
+        loading="lazy"
+      />
     </div>
   );
 };

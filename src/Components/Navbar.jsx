@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { CiSearch, CiShop } from 'react-icons/ci';
 import { IoCartOutline } from 'react-icons/io5';
 import { MdOutlineMoreVert, MdMenu, MdClose } from 'react-icons/md';
@@ -10,7 +10,7 @@ import LoginInfo from './LoginInfo';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   return (
     <div className="fixed top-0 w-full z-50 bg-[#1F74BA] shadow-md">
@@ -38,10 +38,9 @@ const Navbar = () => {
             </button>
           </Tippy>
 
-         
           <div
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate('/cart')} 
+            onClick={() => navigate('/cart')}
           >
             <IoCartOutline color="white" size={28} />
             <span className="hidden md:block text-white">Cart</span>
@@ -82,10 +81,9 @@ const Navbar = () => {
             </button>
           </Tippy>
 
-        
           <div
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate('/cart')} 
+            onClick={() => navigate('/cart')}
           >
             <IoCartOutline size={28} />
             <span>Cart</span>
@@ -108,4 +106,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

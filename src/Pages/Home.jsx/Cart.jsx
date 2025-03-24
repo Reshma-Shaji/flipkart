@@ -51,17 +51,19 @@ const Cart = () => {
           </h2>
 
           {cart.length === 0 ? (
-            <div className="text-center text-gray-600">
-              <p>Your cart is empty.</p>
+            <div className="text-center text-gray-600 p-10">
+              <p className="text-xl font-semibold mb-3">Your cart is empty.</p>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                Continue Shopping
+              </button>
             </div>
           ) : (
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Left Section - Cart Items */}
               <div className="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
                 {cart.map(item => (
                   <div
                     key={item.id}
-                    className="flex flex-col sm:flex-row items-center justify-between border-b border-gray-300 pb-4 mb-4"
+                    className="flex flex-wrap sm:flex-nowrap items-center justify-between border-b border-gray-300 pb-4 mb-4"
                   >
                     <div className="flex items-center gap-4">
                       <img
@@ -77,11 +79,10 @@ const Cart = () => {
                       </div>
                     </div>
 
-                    {/* Quantity Controls */}
                     <div className="flex items-center gap-3 mt-2 sm:mt-0">
                       <button
                         onClick={() => decreaseQuantity(item.id)}
-                        className="bg-gray-300 hover:bg-gray-400 text-black px-3 py-1 rounded-lg"
+                        className="bg-gray-300 hover:bg-gray-400 text-black px-4 py-2 rounded-md text-lg"
                       >
                         −
                       </button>
@@ -90,7 +91,7 @@ const Cart = () => {
                       </span>
                       <button
                         onClick={() => increaseQuantity(item.id)}
-                        className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-lg"
+                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-lg"
                       >
                         +
                       </button>
@@ -99,7 +100,6 @@ const Cart = () => {
                 ))}
               </div>
 
-              {/* Right Section - Price Summary */}
               <div className="bg-white p-6 rounded-lg shadow-md h-fit">
                 <h3 className="text-xl font-semibold text-gray-800 mb-4">
                   Price Details
@@ -119,7 +119,7 @@ const Cart = () => {
                   <span>Total Amount</span>
                   <span>₹{getTotalPrice().toLocaleString()}</span>
                 </div>
-                <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-2 mt-4 rounded-lg font-semibold">
+                <button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black py-2 mt-4 rounded-lg font-semibold transition">
                   Place Order
                 </button>
               </div>

@@ -6,128 +6,83 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <>
-      <div className="bg-[#302f2f] grid grid-cols-6 gap-8 p-10 h-[350px] relative">
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">ABOUT</h1>
-          <a href="">
-            <p>Contact Us</p>
-          </a>
-          <a href="">
-            <p>About Us</p>
-          </a>
-          <a href="">
-            <p>Careers</p>
-          </a>
-          <a href="">
-            <p>Flipkart Stories</p>
-          </a>
-          <a href="">
-            <p>Press</p>
-          </a>
-          <a href="">
-            <p>Corporate Information</p>
-          </a>
+    <div className="bg-[#302f2f] text-white p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">ABOUT</h1>
+          <p>Contact Us</p>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Flipkart Stories</p>
+          <p>Press</p>
+          <p>Corporate Information</p>
         </div>
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">GROUP COMPANIES</h1>
-          <a href="">
-            <p>Myntra</p>
-          </a>
-          <a href="">
-            <p>Cleartrip</p>
-          </a>
-          <a href="">
-            <p>Shopsy</p>
-          </a>
+
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">GROUP COMPANIES</h1>
+          <p>Myntra</p>
+          <p>Cleartrip</p>
+          <p>Shopsy</p>
         </div>
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">HELP</h1>
-          <a href="">
-            <p>Payments</p>
-          </a>
-          <a href="">
-            <p>Shipping</p>
-          </a>
-          <a href="">
-            <p>Cancellation & Returns</p>
-          </a>
-          <a href="">
-            <p>FAQ</p>
-          </a>
+
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">HELP</h1>
+          <p>Payments</p>
+          <p>Shipping</p>
+          <p>Cancellation & Returns</p>
+          <p>FAQ</p>
         </div>
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">CONSUMER POLICY</h1>
-          <a href="">
-            <p>Cancellation & Returns</p>
-          </a>
-          <a href="">
-            <p>Terms Of Use</p>
-          </a>
-          <a href="">
-            <p>Security</p>
-          </a>
-          <a href="">
-            <p>Privacy</p>
-          </a>
-          <a href="">
-            <p>Sitemap</p>
-          </a>
-          <a href="">
-            <p>Grievance Redressal</p>
-          </a>
-          <a href="">
-            <p>EPR Compliance</p>
-          </a>
+
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">CONSUMER POLICY</h1>
+          <p>Cancellation & Returns</p>
+          <p>Terms Of Use</p>
+          <p>Security</p>
+          <p>Privacy</p>
+          <p>Sitemap</p>
+          <p>Grievance Redressal</p>
+          <p>EPR Compliance</p>
         </div>
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">Mail Us:</h1>
-          <p>
-            Flipkart internet Private Limited,
-            <br />
-            Building Alyssa, Begonia & <br />
-            Clove embassy Tech Village,
-            <br />
-            Outer Ring Road, Devarabeesanahallil Village,
-            <br />
-            Bengaluru, 560103, <br />
-            Karnataka, India
+
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">Mail Us:</h1>
+          <p className="leading-relaxed">
+            Flipkart Internet Pvt Ltd, <br />
+            Building Alyssa, Begonia & Clove Embassy Tech Village, <br />
+            Outer Ring Road, Devarabeesanahalli, <br />
+            Bengaluru, 560103, Karnataka, India
           </p>
-          <div className="text-white mt-3">
-            <h1 className="text-gray-400 text-sm">Social:</h1>
-            <div className="flex mt-3 gap-5">
-              <CiFacebook size={22} />
-              <FaXTwitter size={22} />
-              <SlSocialYoutube size={22} />
-              <FaInstagram size={22} />
-            </div>
+
+          <h1 className="text-gray-400 text-sm mt-4">Follow Us:</h1>
+          <div className="flex mt-3 gap-6">
+            <CiFacebook size={24} />
+            <FaXTwitter size={24} />
+            <SlSocialYoutube size={24} />
+            <FaInstagram size={24} />
           </div>
         </div>
-        <div className="text-white">
-          <h1 className="text-gray-400 text-sm">Registered Office Address:</h1>
-          <p>
-            Flipkart internet Private Limited,
-            <br />
-            Building Alyssa, Begonia & <br />
-            Clove embassy Tech Village,
-            <br />
-            Outer Ring Road, Devarabeesanahallil Village,
-            <br />
-            Bengaluru, 560103, <br />
-            Karnataka, India <br />
-            CIN : U75965123GD547475 <br />
-            Telephone: 044-6456245/044-527357
+
+        <div>
+          <h1 className="text-gray-400 text-sm mb-2">Registered Office:</h1>
+          <p className="leading-relaxed">
+            Flipkart Internet Pvt Ltd, <br />
+            Building Alyssa, Begonia & Clove Embassy Tech Village, <br />
+            Outer Ring Road, Devarabeesanahalli, <br />
+            Bengaluru, 560103, Karnataka, India <br />
+            CIN: U75965123GD547475 <br />
+            Telephone: 044-6456245 / 044-527357
           </p>
         </div>
-        <div className="absolute bottom-3 flex text-white gap-28">
-          <p>Become a seller</p>
-          <p>Advertise</p>
-          <p>Git Cards</p>
-          <p>Help Center</p>
-          <p>2007-2025 Flipkart.com</p>
-        </div>
       </div>
-    </>
+
+      <div className="flex flex-wrap justify-center items-center text-center mt-10 gap-5 border-t border-gray-600 pt-4">
+        <p>Become a Seller</p>
+        <p>Advertise</p>
+        <p>Gift Cards</p>
+        <p>Help Center</p>
+        <p>© 2007-2025 Flipkart.com</p>
+      </div>
+    </div>
   );
 };
 

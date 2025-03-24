@@ -4,60 +4,50 @@ import 'tippy.js/dist/tippy.css';
 import { MdOutlineExpandMore } from 'react-icons/md';
 import Fashion from './Fashion';
 
+const categories = [
+  { name: 'Kilos', image: 'kilos.png' },
+  { name: 'Mobiles', image: 'mobile.png' },
+  { name: 'Fashion', image: 'fashion.png', hasDropdown: true },
+  { name: 'Electronics', image: 'electronics.png' },
+  { name: 'Home & Furniture', image: 'home&fur.png.jpg' },
+  { name: 'Appliances', image: 'appliance.png' },
+  { name: 'Flight Bookings', image: 'flightbook.png' },
+  { name: 'Beauty, Toy & More', image: 'beauty-toy.png' },
+  { name: 'Two Wheelers', image: '2wheelers.png' },
+];
+
 const CategorySection = () => {
   return (
-    <div className="bg-white h-32 mt-20 ml-7 mr-7 py-5">
-      <div className="flex justify-center items-center gap-10">
-        <div>
-          <img src="kilos.png" alt="Kilos" />
-          <h3 className="font-semibold text-center">Kilos</h3>
-        </div>
-        <div>
-          <img className="ml-3" src="mobile.png" alt="Mobiles" />
-          <h3 className="font-semibold text-center">Mobiles</h3>
-        </div>
-        <div>
-          <img src="fashion.png" alt="Fashion" />
-          <div className="flex items-center">
-            <h3 className="font-semibold text-center mr-1 hover:text-[#1F74BA]">
-              Fashion
-            </h3>
-            <Tippy
-              content={<Fashion />}
-              theme="light"
-              interactive={true}
-              placement="bottom"
-            >
-              <span className="cursor-pointer">
-                <MdOutlineExpandMore />
-              </span>
-            </Tippy>
+    <div className="bg-white py-5 mt-10 mx-7 shadow-md rounded-lg">
+      <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
+        {categories.map((category, index) => (
+          <div key={index} className="flex flex-col items-center">
+            <img
+              src={category.image}
+              alt={category.name}
+              className="w-16 h-16 object-contain"
+            />
+            {category.hasDropdown ? (
+              <div className="flex items-center group">
+                <h3 className="font-semibold text-center hover:text-blue-600">
+                  {category.name}
+                </h3>
+                <Tippy
+                  content={<Fashion />}
+                  theme="light"
+                  interactive={true}
+                  placement="bottom"
+                >
+                  <span className="cursor-pointer">
+                    <MdOutlineExpandMore className="group-hover:text-blue-600" />
+                  </span>
+                </Tippy>
+              </div>
+            ) : (
+              <h3 className="font-semibold text-center">{category.name}</h3>
+            )}
           </div>
-        </div>
-        <div>
-          <img className="ml-5" src="electronics.png" alt="Electronics" />
-          <h3 className="font-semibold text-center">Electronics</h3>
-        </div>
-        <div>
-          <img className="ml-5" src="home&fur.png.jpg" alt="Home & Furniture" />
-          <h3 className="font-semibold text-center">Home & Furniture</h3>
-        </div>
-        <div>
-          <img className="ml-5" src="appliance.png" alt="Appliances" />
-          <h3 className="font-semibold text-center">Appliances</h3>
-        </div>
-        <div>
-          <img className="ml-5" src="flightbook.png" alt="Flight Bookings" />
-          <h3 className="font-semibold text-center">Flight Bookings</h3>
-        </div>
-        <div>
-          <img className="ml-5" src="beauty-toy.png" alt="Beauty, Toy & More" />
-          <h3 className="font-semibold text-center">Beauty, Toy & More</h3>
-        </div>
-        <div>
-          <img className="ml-5" src="2wheelers.png" alt="Two Wheelers" />
-          <h3 className="font-semibold text-center">Two Wheelers</h3>
-        </div>
+        ))}
       </div>
     </div>
   );
