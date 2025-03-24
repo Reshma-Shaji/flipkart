@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // ✅ Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import { CiSearch, CiShop } from 'react-icons/ci';
 import { IoCartOutline } from 'react-icons/io5';
 import { MdOutlineMoreVert, MdMenu, MdClose } from 'react-icons/md';
@@ -10,7 +10,7 @@ import LoginInfo from './LoginInfo';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navigate = useNavigate(); // ✅ Initialize navigate function
+  const navigate = useNavigate(); 
 
   return (
     <div className="fixed top-0 w-full z-50 bg-[#1F74BA] shadow-md">
@@ -38,10 +38,10 @@ const Navbar = () => {
             </button>
           </Tippy>
 
-          {/* ✅ Cart Clickable for Navigation */}
+         
           <div
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate('/cart')} // ✅ Navigate to Cart page
+            onClick={() => navigate('/cart')} 
           >
             <IoCartOutline color="white" size={28} />
             <span className="hidden md:block text-white">Cart</span>
@@ -82,10 +82,10 @@ const Navbar = () => {
             </button>
           </Tippy>
 
-          {/* ✅ Mobile Menu Cart Clickable for Navigation */}
+        
           <div
             className="flex items-center gap-2 cursor-pointer"
-            onClick={() => navigate('/cart')} // ✅ Navigate to Cart page
+            onClick={() => navigate('/cart')} 
           >
             <IoCartOutline size={28} />
             <span>Cart</span>
@@ -109,32 +109,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import { ShoppingCart } from 'lucide-react';
-
-// const Navbar = ({ cart = [] }) => {
-//   const cartCount = cart.reduce(
-//     (total, item) => total + (item.quantity || 1),
-//     0
-//   );
-
-//   return (
-//     <nav className="bg-blue-600 p-4 shadow-lg flex justify-between items-center">
-//       <Link to="/" className="text-white text-2xl font-bold">
-//         MyShop
-//       </Link>
-
-//       <Link to="/cart" className="relative">
-//         <ShoppingCart className="text-white w-8 h-8" />
-//         {cartCount > 0 && (
-//           <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
-//             {cartCount}
-//           </span>
-//         )}
-//       </Link>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
